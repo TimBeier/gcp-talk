@@ -1,0 +1,129 @@
+{
+	"info": {
+		"_postman_id": "a1c644d7-77d4-439a-b766-6ea2579244c2",
+		"name": "gcp-talk-requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23171809"
+	},
+	"item": [
+		{
+			"name": "Get-Index",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create-User1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"name1\",\r\n    \"mobile\": \"25665554\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/gcp-presentation-359912/us-central1/app/api/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"gcp-presentation-359912",
+						"us-central1",
+						"app",
+						"api",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create-User2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"name2\",\r\n    \"mobile\": \"mobile2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5001/gcp-presentation-359912/us-central1/app/api/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"gcp-presentation-359912",
+						"us-central1",
+						"app",
+						"api",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-User1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5001/gcp-presentation-359912/us-central1/app/api/get/1662370054215",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5001",
+					"path": [
+						"gcp-presentation-359912",
+						"us-central1",
+						"app",
+						"api",
+						"get",
+						"1662370054215"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get-Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://europe-west3-gcp-talk-361608.cloudfunctions.net/app/api/get/",
+					"protocol": "https",
+					"host": [
+						"europe-west3-gcp-talk-361608",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"app",
+						"api",
+						"get",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
