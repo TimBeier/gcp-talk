@@ -1,25 +1,27 @@
 import {Request, Response} from "firebase-functions";
 
-// Import Db
+// ToDo Import Db
 
 export default async (req: Request, res: Response) => {
     try {
-        // Get Id from request
+        // ToDo Get Id from request
 
-        // Get db
-        // Get collection userDetails
-        // Get document from collection by Id
+        // ToDo Get db
+        // ToDo Get collection userDetails
+        // ToDo Get document from collection by Id
 
-        // Get userDetail from requestDocument
+        // ToDo Get userDetail from awaited requestDocument
 
-        // Convert format (db->object)
+        // ToDo Convert format (db->object)
 
-        // Add userDetail object
+        // ToDo Throw Error if null
+
+        // ToDo Add userDetail object
         return res
             .status(200)
             .send({
                 status: 'Got Glory',
-                userDetails: 'None Found'
+                userDetailData: null
             })
     } catch (error) {
         console.error(error);
@@ -49,23 +51,28 @@ export default async (req: Request, res: Response) => {
 import db from "../../db/db";
 export default async (req: Request, res: Response) => {
     try {
-        // Get Id from request
+        // ToDo Get Id from request
         const id = req.params.id;
 
-        // Get db
-        // Get collection userDetails
-        // Get document from collection by Id
+        // ToDo Get db
+        // ToDo Get collection userDetails
+        // ToDo Get document from collection by Id
         const reqDoc = db()
             .collection('userDetails')
             .doc(id);
 
-        // Get userDetail from requestDocument
+        // ToDo Get userDetail from awaited requestDocument
         const userDetail = await reqDoc.get();
 
-        // Convert format (db->object)
+        // ToDo Convert format (db->object)
         const userDetailData = userDetail.data();
 
-        // Add userDetail object
+        // ToDo Throw Error if null
+        if(!userDetailData){
+            throw new Error('ResourceNotFound');
+        }
+
+        // ToDo Add userDetail object
         return res
             .status(200)
             .send({
@@ -77,4 +84,5 @@ export default async (req: Request, res: Response) => {
         return res.status(500).send('Failed to Get Glory');
     }
 };
+
 */

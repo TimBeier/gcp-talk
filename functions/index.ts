@@ -12,7 +12,7 @@ import cors from "cors";
 // Routes
 import getUserDetails from "./src/request/userDetail/getUserDetails";
 import createUserDetail from "./src/request/userDetail/createUserDetail";
-// Import getUserDetail
+// ToDo Import getUserDetail
 
 // Setup Firebase
 admin.initializeApp({
@@ -31,7 +31,7 @@ app.get('/', (req: Request, res: Response) => {
 app.post('/api/create', createUserDetail);
 app.get('/api/get/', getUserDetails);
 
-// Get User by Id
+// ToDo Get User by Id
 
 
 // Export to Cloud Functions
