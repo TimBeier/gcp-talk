@@ -10,9 +10,9 @@ import express from "express";
 import cors from "cors";
 
 // Routes
-import getUserDetail from "./src/request/userDetail/getUserDetail";
 import getUserDetails from "./src/request/userDetail/getUserDetails";
 import createUserDetail from "./src/request/userDetail/createUserDetail";
+// Import getUserDetail
 
 // Setup Firebase
 admin.initializeApp({
@@ -28,10 +28,26 @@ app.use(cors({origin: true}))
 app.get('/', (req: Request, res: Response) => {
     return res.status(200).send('Glory!');
 })
-app.post('/api/create', createUserDetail)
-app.get('/api/get/:id', getUserDetail)
-app.get('/api/get/', getUserDetails)
+app.post('/api/create', createUserDetail);
+app.get('/api/get/', getUserDetails);
+
+// Get User by Id
+
 
 // Export to Cloud Functions
 exports.app = functions.region("europe-west3").https.onRequest(app);
 
+
+
+
+
+
+
+
+
+
+
+/* Live Coding Notes
+    import getUserDetail from "./src/request/userDetail/getUserDetail";
+    app.get('/api/get/:id', getUserDetail);
+ */
